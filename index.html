@@ -1,7 +1,18 @@
 <script src="platform.js">
 function clickit()
 {
-    document.getElementById("plot-and-link").click();  
+    if (platform.os == 'Android')
+    {
+        document.getElementById("plot-and-link").click();
+    }
+    else if (platform.os == 'iOS') 
+    {
+        document.getElementById("plot-ios-link").click();
+    }
+    else
+    {
+        document.getElementById("plot-link").click();
+    }
 }
 // function getPlatform() {
 //    var platform = ["Win32", "Android", "iOS"];
@@ -19,5 +30,5 @@ window.onload = clickit;
 
 </script>
 <a id='plot-and-link' href="intent://channel/UCkcSreQ7Q69-Jv1KoE25mpg/#Intent;scheme=vnd.youtube;package=com.google.android.youtube;S.browser_fallback_url=market://details?id=com.google.android.youtube;end;">plotpoint youtube android</a>
-<!-- <a id='plot-ios-link' href="youtube://www.youtube.com/channel/UCkcSreQ7Q69-Jv1KoE25mpg>">plotpoint youtube ios</a> -->
-<!-- <a id='plot-link' href="https://www.youtube.com/channel/UCkcSreQ7Q69-Jv1KoE25mpg">plotpoint</a> -->
+<a id='plot-ios-link' href="youtube://www.youtube.com/channel/UCkcSreQ7Q69-Jv1KoE25mpg>">plotpoint youtube ios</a> -->
+<a id='plot-link' href="https://www.youtube.com/channel/UCkcSreQ7Q69-Jv1KoE25mpg">plotpoint</a>
